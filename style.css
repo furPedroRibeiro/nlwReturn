@@ -9,7 +9,11 @@
   --headline: #212529;
   --paragraph: #495057;
   --white: #fff;
-  --brandGreenBack: #DCE9E2;
+  --brandLigth: #DCE9E2;
+  --brandBeige:#FFFAF1;
+
+  --nav-height: 7.2rem;
+
 }
 body{
   font-family: 'DM Sans';
@@ -17,31 +21,51 @@ body{
   text-align: center;
   background-color: var(--brandGreenBack);
 }
-header{
+
+/* GENERAL CLASS */
+
+.wrapper{
   width: 37.5rem;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 4.1rem;
+  padding: 2.4rem;
 }
-#welcomeText{
+
+/* HEADER CSS */
+header{
+  margin-top: calc(4.1rem + var(--nav-height));
+}
+header::before{
+  content: "";
+  width: 100vw;
+  height: calc(108rem + var(--nav-height));
+  background-color: var(--brandLigth);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+header #welcomeText{
   font-size: 1.4rem;
   color: var(--primary-color);
   margin-bottom: 1.6rem;
 }
-#titleH1{
+header #titleH1{
   color: var(--headline);
   font-size: 5.2rem;
   line-height: 130%;
   margin-bottom: 2.4rem;
 }
-#subTitle{
+header #subTitle{
   font-size: 1.8rem;
   color: var(--paragraph);
   line-height: 150%;
   font-weight: 400;
   margin-bottom: 3.2rem;
 }
-.button{
+header .button{
   background-color: var(--primary-color);
   border: none;
   border-radius: 4rem;
@@ -62,6 +86,68 @@ header{
   justify-content: center;
   gap: 1.6rem;
 
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline: auto;
+}
+header img{
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+}
+header .stats{
+  width: 32.7rem;
+
+  padding-block: 4rem;
+
+  margin-inline: auto;
+
+  background-color: var(--brandBeige);
+  border-radius: 0.6rem;
+  border: 1px solid var(--brandLigth);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6rem;
+
+}
+.stat h3{
+  font-size: 4.8rem;
+  color: var(--headline);
+  margin-bottom: 0.4rem;
+}
+.stat p{
+  line-height: 130%;
+  color: var(--primary-color);
+  line-height: 150%;
+}
+
+/* NAV CSS */
+
+nav{
+  display: flex;
+
+  height: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav .wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.scroll{
+  background-color: var(--primary-color);
+  width: 100vw;
+}
+nav.scroll svg:nth-child(1) path{
+  fill: white;
+}
+nav.scroll svg:nth-child(2) path{
+  stroke: white;
 }
