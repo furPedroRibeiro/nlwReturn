@@ -6,8 +6,10 @@ function onScroll() {
   }
 }
 function openMenu() {
+  navigation.classList.remove('scroll')
   document.body.classList.add('menu-expanded')
 }
 function closeMenu() {
+  navigation.classList.remove('scroll')
   document.body.classList.remove('menu-expanded')
 }
