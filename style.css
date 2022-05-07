@@ -79,6 +79,7 @@ header #subTitle{
 header .button{
   background-color: var(--primary-color);
   border: none;
+  cursor: pointer;
   border-radius: 4rem;
   width: 26.3rem;
   height: 5.2rem;
@@ -246,4 +247,92 @@ nav button{
 #aboutwe img{
   margin-top: 6rem;
   margin-bottom: 10rem;
+}
+
+/* Contact css */
+#contact{
+  background-color: var(--white);
+}
+#contact header{
+  margin-top: 10rem;
+}
+#contact main{
+  margin-top: 3.2rem;
+}
+#contact h2{
+  font-size: 3rem;
+  line-height: 3.9rem;
+  color: var(--headline);
+}
+#contact p{
+  display: inline-flex;
+  justify-content: center;
+
+  padding: 1rem;
+
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+
+  color: var(--paragraph);
+}
+#contact span{
+  margin-left: 0.8rem;
+}
+#contact button{
+  background-color: var(--primary-color);
+  cursor: pointer;
+
+  border: none;
+  border-radius: 4rem;
+  width: 26.7rem;
+  height: 5.6rem;
+  padding: 1.6rem 3.2rem;
+
+  /* about text */
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  color: var(--white);
+  font-weight: 700;
+  line-height: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.6rem;
+  margin-top: 3.2rem;
+}
+#contact img{
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+}
+
+/* footer css */
+
+#footer{
+  background-color: var(--primary-color);
+}
+#footer header{
+  margin-top: 6rem;
+}
+#footer main{
+  margin-top: 2.4rem;
+}
+#footer p{
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+
+  color: var(--white);
+}
+#footer p{
+  margin-top: 1.2rem;
+}
+#footer .icons{
+  margin-top: 3.2rem;
+  margin-bottom: 3rem;
+  gap: 3.2rem;
+  display: inline-flex;
 }
